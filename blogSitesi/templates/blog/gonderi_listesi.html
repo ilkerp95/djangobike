@@ -1,0 +1,34 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>Bisiklet</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+        <link href='https://fonts.googleapis.com/css?family=Russo+One' rel='stylesheet' type='text/css'>
+
+         <link rel="stylesheet" href="{% static 'css/blog_sitesi.css' %}">
+
+        <body>
+
+
+            <div>
+
+
+            </div>
+
+            <div class="content_container">
+                <div class="row">
+                    <div class="col-md-8">
+                        {% for gonderi in gonderiler %}
+                            <div class="post">
+                                <h1><a href="">{{ gonderi.turler }}</a></h1>
+
+                                <p>{{ gonderi.icerik|linebreaks }}</p>
+                            </div>
+                        {% endfor %}
+                    </div>
+                   </div>
+            </div>
+    </body>
+</html>
